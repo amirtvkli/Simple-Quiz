@@ -2,21 +2,21 @@
     "quizlist": [ 
       {
         "question": "What does the aesthetic-usability effect refer to?",
-        "option1": "People tend to perceive usable products as more attractive.",
-        "option2": "People tend to perceive attractive products as more usable.",
+        "option1": "People tend to perceive attractive products as more usable.",
+        "option2": "People tend to perceive usable products as more attractive.",
         "option3": "Usability and aesthetics are equally important in web design.",
         "option4": "The perception of attractiveness and usability of a new site are evaluated in the first 50ms when a user first sees the site.",
-        "correctAnswer": "b",
-        "source": "The Aesthetic-Usability Effect"
+        "source": "The Aesthetic-Usability Effect",
+        "url":"https://www.nngroup.com/articles/aesthetic-usability-effect/"
       },
       {
         "question": "Which of the following is NOT a type of microcontent?",
-        "option1": "Page title",
+        "option1": "Email body",
         "option2": "Headline",
         "option3": "Tagline",
-        "option4": "Email body",
-        "correctAnswer": "d",
-        "source": "Microcontent A Few Small Words Have a Mega Impact on Business"
+        "option4": "Page title",
+        "source": "Microcontent A Few Small Words Have a Mega Impact on Business",
+        "url":"https://www.nngroup.com/articles/microcontent-how-to-write-headlines-page-titles-and-subject-lines/"
       },
       {
         "question": "Which of the following best describes the false-consensus effect?",
@@ -24,26 +24,26 @@
         "option2": "Designers think that their favorite web-design patterns are more widespread than they are in reality.",
         "option3": "People assume that their needs are unique most of the time, and that only in exceptional situations they will react in the same way as others.",
         "option4": "Members of a team tend to act cohesively to give outsiders the illusion of consensus.",
-        "correctAnswer": "a",
-        "source": "Microcontent A Few Small Words Have a Mega Impact on Business"
+        "source": "You Are Not the User: The False-Consensus Effect",
+        "url":"https://www.nngroup.com/articles/false-consensus/"
       },
       {
         "question": "What is a difference between a customer-journey map and an experience map?",
-        "option1": "The customer-journey map is focused on customers, while the experience map is focused on employees.",
+        "option1": "The experience map is agnostic of any specific products, while the customer-journey map is tied to a specific product or service.",
         "option2": "The customer-journey map depicts events in chronological order, but the experience map is not chronological or sequential.",
-        "option3": "The experience map is agnostic of any specific products, while the customer-journey map is tied to a specific product or service.",
+        "option3": "The customer-journey map is focused on customers, while the experience map is focused on employees.",
         "option4": "The customer-journey map offers a general human perspective, not specific to a particular user.",
-        "correctAnswer": "c",
-        "source": "UX Mapping Methods Compared: A Cheat Sheet"
+        "source": "UX Mapping Methods Compared: A Cheat Sheet",
+        "url":"https://www.nngroup.com/articles/ux-mapping-cheat-sheet/"
       },
       {
         "question": "Which of the following best describes the exhaustive-review eye-movement pattern?",
-        "option1": "The eyes are repeatedly drawn to the top left corner of the webpage because the user wants to make sure that the page belongs to the right site.",
-        "option2": "The eyes are drawn to the same area of the page repeatedly because the UI violates user’s expectations.",
+        "option1": "The eyes are drawn to the same area of the page repeatedly because the UI violates user’s expectations.",
+        "option2": "The eyes are repeatedly drawn to the top left corner of the webpage because the user wants to make sure that the page belongs to the right site.",
         "option3": "The eyes systematically visit all the areas of the page in an effort not to miss anything.",
         "option4": "The eyes thoroughly scan the area of the page that has the most content.",
-        "correctAnswer": "b",
-        "source": "Exhaustive Review or I Can’t Believe It is Not There Phenomenon: Evidence from Eyetracking"
+        "source": "Exhaustive Review or I Can’t Believe It is Not There Phenomenon: Evidence from Eyetracking",
+        "url":"https://www.nngroup.com/articles/exhaustive-review-eyetracking/"
       },
       {
         "question": "Which of the following does NOT usually appear in a service blueprint?",
@@ -51,17 +51,17 @@
         "option2": "Customer actions",
         "option3": "Processes",
         "option4": "Backstage actions",
-        "correctAnswer": "a",
-        "source": "Service Blueprints: Definition"
+        "source": "Service Blueprints: Definition",
+        "url":"https://www.nngroup.com/articles/service-blueprints-definition/"
       },
       {
         "question": "Which of the following is true of quantitative research?",
-        "option1": "It typically requires just 5 users.",
+        "option1": "It produces statistically meaningful results that are likely to be replicated in a different study.",
+        "option3": "It typically requires just 5 users.",
         "option2": "It is used mostly for formative purposes, in the early stages of a design to inform design decisions.",
-        "option3": "It produces statistically meaningful results that are likely to be replicated in a different study.",
         "option4": "It allows for flexible study conditions that can be adjusted from session to session according to the team’s needs.",
-        "correctAnswer": "c",
-        "source": "Quantitative vs. Qualitative Usability Testing"
+        "source": "Quantitative vs. Qualitative Usability Testing",
+        "url":"https://www.nngroup.com/articles/quant-vs-qual/"
       },
       {
         "question": "Which part of a webpage receives most of the users’ fixations?",
@@ -69,26 +69,26 @@
         "option2": "Right half of the page",
         "option3": "Both sides of the page receive about an equal proportion of fixations.",
         "option4": "It depends on the page level in the site’s IA hierarchy.",
-        "correctAnswer": "a",
-        "source": "Horizontal Attention Leans Left"
+        "source": "Horizontal Attention Leans Left",
+        "url":"https://www.nngroup.com/articles/horizontal-attention-leans-left/"
       },
       {
         "question": "What is one advantage of sliders for application design?",
-        "option1": "They represent a more fun and engaging input method compared with other UI controls.",
-        "option2": "They allow users to explore the effect of the control for the whole range of the associated parameter.",
+        "option1": "They allow users to explore the effect of the control for the whole range of the associated parameter.",
+        "option2": "They represent a more fun and engaging input method compared with other UI controls.",
         "option3": "They support precise selection of a specific value within a range.",
         "option4": "They allow both fine and coarse parameter adjustment.",
-        "correctAnswer": "b",
-        "source": "Input Controls for Parameters: Balancing Exploration and Precision with Sliders, Knobs, and Matrices"
+        "source": "Input Controls for Parameters: Balancing Exploration and Precision with Sliders, Knobs, and Matrices",
+        "url":"https://www.nngroup.com/articles/sliders-knobs/"
       },
       {
         "question": "Which of the following is true of tree testing?",
-        "option1": "It should be done before card sorting when both card sorting and tree testing are used.",
+        "option1": "It is devoid of any visual styling and does not reflect well the experience of interacting with the full design.",
+        "option3": "It should be done before card sorting when both card sorting and tree testing are used.",
         "option2": "It does not typically collect any quantitative measures.",
-        "option3": "It is devoid of any visual styling and does not reflect well the experience of interacting with the full design.",
         "option4": "It can be used interchangeably with card sorting.",
-        "correctAnswer": "c",
-        "source": "Tree Testing Fast, Iterative Evaluation of Menu Labels and Categories and Tree Testing Part 2: Interpreting the Results"
+        "source": "Tree Testing Fast, Iterative Evaluation of Menu Labels and Categories and Tree Testing Part 2: Interpreting the Results",
+        "url":"https://www.nngroup.com/articles/tree-testing/"
       }
     ]
   }

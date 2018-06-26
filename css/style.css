@@ -21,25 +21,28 @@ body {
     display: block;
 }
 #navContent{
-    width:600px;
+    width:700px;
     position:relative;
     overflow:hidden;
     }
 #game1{
     margin:auto;
-    width:600px;
+    width:700px;
     right:0px;
     position:absolute;
     }
 #game2{
     margin:auto;
-    width:600px;
-    right:-600px;
+    width:700px;
+    right:-700px;
     position:absolute;
     }
     .questionText{
-        font-weight: bold;
+  
         }
+        .result{
+            font-weight: bold;
+            }
   .option{
         width:500px;
        

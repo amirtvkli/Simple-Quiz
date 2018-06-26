@@ -6,16 +6,17 @@
 	var questionLock=false;
 	var numberOfQuestions;
 	var score=0;
-var distance='600px';
+	var distance='700px';
 	$.getJSON('db/db.json', function(jsonData, textStatus) {
-				for(i=0;i<jsonData.quizlist.length;i++){ 
+		for(i=0;i<jsonData.quizlist.length;i++){ 
 			questionBank[i]=new Array;
 			questionBank[i][0]= (i+1).toString() +'. ' +jsonData.quizlist[i].question;
-			questionBank[i][1]='a. '+jsonData.quizlist[i].option1;
-			questionBank[i][2]='b. '+jsonData.quizlist[i].option2;
-			questionBank[i][3]='c. '+jsonData.quizlist[i].option3;
-			questionBank[i][4]='d. '+jsonData.quizlist[i].option4;
+			questionBank[i][1]=jsonData.quizlist[i].option1;
+			questionBank[i][2]=jsonData.quizlist[i].option2;
+			questionBank[i][3]=jsonData.quizlist[i].option3;
+			questionBank[i][4]=jsonData.quizlist[i].option4;
 			questionBank[i][5]=jsonData.quizlist[i].source;
+			questionBank[i][6]=jsonData.quizlist[i].url;
 		}
 		numberOfQuestions=questionBank.length; 
 		displayFirstSlide();
@@ -43,13 +44,13 @@ var distance='600px';
 		var q2;
 		var q3;
 		var q4;
-
-		if(rnd==1){q1=questionBank[questionNumber][1];q2=questionBank[questionNumber][2];q3=questionBank[questionNumber][3];q4=questionBank[questionNumber][4];}
-		if(rnd==2){q2=questionBank[questionNumber][1];q3=questionBank[questionNumber][2];q1=questionBank[questionNumber][3];q4=questionBank[questionNumber][4];}
+		
+		if(rnd==1){q1=questionBank[questionNumber][1];q4=questionBank[questionNumber][2];q3=questionBank[questionNumber][3];q2=questionBank[questionNumber][4];}
+		if(rnd==2){q2=questionBank[questionNumber][1];q3=questionBank[questionNumber][2];q4=questionBank[questionNumber][3];q1=questionBank[questionNumber][4];}
 		if(rnd==3){q3=questionBank[questionNumber][1];q1=questionBank[questionNumber][2];q2=questionBank[questionNumber][3];q4=questionBank[questionNumber][4];}
-		if(rnd==4){q4=questionBank[questionNumber][1];q1=questionBank[questionNumber][2];q2=questionBank[questionNumber][3];q3=questionBank[questionNumber][4];}
-
-		$(stage).append('<div class="questionText">'+questionBank[questionNumber][0]+'</div><div id="1" class="option">'+q1+'</div><div id="2" class="option">'+q2+'</div><div id="3" class="option">'+q3+'</div><div id="3" class="option">'+q4+'</div>');
+		if(rnd==4){q4=questionBank[questionNumber][1];q2=questionBank[questionNumber][2];q1=questionBank[questionNumber][3];q3=questionBank[questionNumber][4];}
+		
+		$(stage).append('<div class="questionText">'+questionBank[questionNumber][0]+'</div><div id="1" class="option">'+'a. '+q1+'</div><div id="2" class="option">'+'b. '+q2+'</div><div id="3" class="option">'+'c. '+q3+'</div><div id="4" class="option">'+'d. '+q4+'</div>');
 		
 		$('.option').click(function(){
 			document.getElementById("game1").style.color = "grey";
@@ -57,12 +58,16 @@ var distance='600px';
 			if(questionLock==false){questionLock=true;	
 				//correct answer
 				if(this.id==rnd){
-					$(stage).append(`<a class="ui green text label">  <i class="mail icon"></i> CORRECT </a>`);
+					this.style.background="green";
+					this.style.color="white";
+					$(stage).append(`<a class="ui green text label"> CORRECT </a>`);
 					score++;
 				}
 				//wrong answer	
 				if(this.id!=rnd){
-					$(stage).append(`<a class="ui red text label">  <i class="mail icon"></i> WRONG </a>`);
+					this.style.background="red";
+					this.style.color="white";
+					$(stage).append(`<a class="ui red text label"> WRONG </a>`);
 				}
 				setTimeout(function(){changeQuestion()},1000);
 			}})
@@ -81,6 +86,28 @@ var distance='600px';
 		}//change question
 		
 		function displayFinalSlide(){
-			$(stage).append('<div class="questionText">You have finished the quiz!<br><br>Total questions: '+numberOfQuestions+'<br>Correct answers: '+score+'</div>');
+			var lead='<div class="questionText">You have finished the quiz!';
+			var lat='Total questions: '+numberOfQuestions+'<br>Correct answers: '+score+'</div>';
+			if(score==0){
+				$(stage).append(lead+'<div class="result">Are you sure you’re into user experience? Study up. Read the reference articles and try the quiz again.</div>'+lat);
+			}
+			else if (score>=1 && score<6){
+				$(stage).append(lead+'<div class="result">The good news is that you can study harder, right now. Please read all the reference articles provided.</div>'+lat);
+			}
+			else if (score>=6 && score<8){
+				$(stage).append(lead+'<div class="result">You clearly know a good deal about UX, but might want to study harder. </div>'+lat);
+			}
+			else if (score>=8 && score<10){
+				$(stage).append(lead+'<div class="result">You are a UX expert. An 80% score (on a much bigger set of exams) is what\'s required for UX Certification. This quiz is good practice, but does not count for UX Certification</div>'+lat);
+			}
+			else{
+				$(stage).append(lead+'<div class="result">Send us your resume (info@studiovista.ir).</div>'+lat);
+			}
+			
+			$(stage).append('<p style="margin-top:20px;">related articles:<p><ul>');
+			for (let i = 0; i < numberOfQuestions; i++) {
+				$(stage).append('<li><a href="'+questionBank[i][6]+'">  - '+questionBank[i][5]+'</a></li>');
+			}
+			$(stage).append('</ul>');
 		}//display final slide
 	});//doc ready
