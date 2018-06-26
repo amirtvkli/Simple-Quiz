@@ -104,9 +104,10 @@
 				$(stage).append(lead+'<div class="result">Send us your resume (info@studiovista.ir).</div>'+lat);
 			}
 			
-			$(stage).append('<p style="margin-top:20px;">related articles:<p>');
+			$(stage).append('<p style="margin-top:20px;">related articles:<p><ul>');
 			for (let i = 0; i < numberOfQuestions; i++) {
-				$(stage).append('<a href="'+questionBank[i][6]+'">  - '+questionBank[i][5]+'</a>');
+				$(stage).append('<li><a href="'+questionBank[i][6]+'">'+questionBank[i][5]+'</a></li>');
 			}
+			$(stage).append('</ul>');
 		}//display final slide
 	});//doc ready
