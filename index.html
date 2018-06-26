@@ -1,64 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>آزمون طراحی UX</title>
-    
+    <title>UX Quiz</title>
+    <meta charset="UTF-8">
     <!-- styles -->
     <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
-    <script
-    src="https://code.jquery.com/jquery-3.1.1.min.js"
-    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-    crossorigin="anonymous"></script>
-    <script src="semantic/dist/semantic.min.js"></script>
+    
     <link rel="stylesheet" href='css/style.css'>
-    
     <!-- scripts -->
-    <script src='js/script.js'></script>
-    
+    <script src="js/jquery.js"></script>
+    <!-- <script src='js/script.js'></script> -->
+    <script src="semantic/dist/semantic.min.js"></script> 
+    <script  type="text/javascript" src="js/controller.js"></script> 
+
 </head>
 <body>
     <div id='container'>
-        <header>
-            <h1>یک آزمون ساده!</h1>
-            <p>با پاسخ دادن به این آزمون سادهُ میزان دانش خود را در زمینه طراحی تجربه کاربری (UX) محک بزنید. </strong></p>
+        <header >
+            <h1>User-Experience Quiz</h1>
         </header>
-        <section>
-            <div id='results'></div>
-            <form class="ui form" name="quizForm" onsubmit="return submitAnswers()">
-                <h5>1. اثر جذابیت-کاربردپذیری(aesthetic-usability) به کدام یک از گزینه های زیر اشاره دارد؟</h5>
-                <input type="radio" name="q1" value="a" id='q1a'>الف.  محصولات کاربردی، جذابتر به نظر می رسند.<br>
-                <input type="radio" name="q1" value="b" id='q1b'>ب.  محصولات جذاب تر، کاربردی تر به نظر می رسند.<br>
-                <input type="radio" name="q1" value="c" id='q1c'>ج. کاربردپذیری و زیبایی در طراحی وب سایت بسیار مهم هستند.<br>
-                <input type="radio" name="q1" value="d" id='q1d'>د. ارزیابی جذابیت و کاربردپذیری یک وب سایت جدید در 50 میلی ثانیه اولی که کاربر سایت را می بنید، اتفاق می افتد. <br>
-                
-                <h5>2. کدام یک از این موارد، ریزمحتوا نیست؟</h5>
-                <input type="radio" name="q2" value="a" id='q1a'>الف.  عنوان برگه (Page title).<br>
-                <input type="radio" name="q2" value="b" id='q1b'>ب.  عنوان ها (Headline).<br>
-                <input type="radio" name="q2" value="c" id='q1c'>ج. خط برچسب (Tagline).<br>
-                <input type="radio" name="q2" value="d" id='q1d'>د. بدنه پست الکترونیکی (Email body). <br>
-                
-                <h5>1. اثر جذابیت-کاربردپذیری به کدام یک از گزینه های زیر اشاره دارد؟</h5>
-                <input type="radio" name="q3" value="a" id='q1a'>الف.  محصولات کاربردی، جذابتر به نظر می رسند.<br>
-                <input type="radio" name="q3" value="b" id='q1b'>ب.  محصولات جذاب تر، کاربردی تر به نظر می رسند.<br>
-                <input type="radio" name="q3" value="c" id='q1c'>ج. کاربردپذیری و زیبایی در طراحی وب سایت بسیار مهم هستند.<br>
-                <input type="radio" name="q3" value="d" id='q1d'>د. ارزیابی جذابیت و کاربردپذیری یک وب سایت جدید در 50 میلی ثانیه اولی که کاربر سایت را می بنید، اتفاق می افتد. <br>
-                
-                
-                <br>
-                
-                <br>
-                <div class="ui teal labeled icon button">
-                        <button class="ui button" type="submit">Submit Answers</button>
-                        <i class="add icon"></i>
-                      </div>
-               
-                <p id="writer">مترجم: امیر توکلی <br>ترجمه شده از <a href="https://www.nngroup.com/articles/ux-quiz/">صفحه لاتین آزمون</a> بر اساس مقاله ای از Raluca Budiu در January 7, 2018 در موسسه <a href="https://www.nngroup.com">NN Group</a>.</p>
-            </form>
+        <div id="spacer"></div>
+        <section id="navContent">
+                <div id="game1"></div>
+                <div id="game2"></div>
         </section>
-        <footer >
-            <p style="direction:ltr !important;"> Studio Vista &copy; All Rights Reserved 2017.</p>
-        </footer>
+      
     </div>
-    
+    <footer >
+        <p > Studio Vista &copy; All Rights Reserved 2017.</p>
+    </footer>
 </body>
 </html>
