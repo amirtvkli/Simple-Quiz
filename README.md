@@ -1,24 +1,22 @@
 # User-Experience Quiz
 
-What you will learn:
-how to build a simple multiple choice quiz as a web page
-basic techniques and technologies used in HTML5
-Prerequisites:
+I created a simple multiple choice quiz as a web page basic techniques and technologies used in HTML5
+> I recommend using _`Firefox`_ for this tutorial. We will be using JSON which Chrome and some other browsers will not display if offline.
+
+#### Prerequisites: 
 basic knowledge or experience with HTML or Javascript will be helpful
 
-Required time: 
+#### Required time: 
 1 - 2 hours
 
-Notes:
+#### Notes:
 This will be a great project for anyone starting out in HTML5 who wants a simple and fun project to build. It’s a multiple choice quiz that we can put on a website! We can make it easy to extend and add questions to and we can even make sure it will work on a mobile phone. And if you just want to grab the source code without following the tutorial, then that’s fine, too.
 
 
-I recommend using Firefox for this tutorial. We will be using JSON which Chrome and some other browsers will not display if offline.
 
+[VIEW DEMO](http://studiovista.ir)
 
-VIEW DEMO
-
-DOWNLOAD SOURCE
+[DOWNLOAD SOURCE](http://studiovista.ir)
  
 
 HTML
