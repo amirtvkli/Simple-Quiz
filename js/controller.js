@@ -60,16 +60,16 @@
 				if(this.id==rnd){
 					this.style.background="green";
 					this.style.color="white";
-					$(stage).append(`<a class="ui green text label"> CORRECT </a>`);
+					// $(stage).append(`<a class="ui green text label"> CORRECT </a>`);
 					score++;
 				}
 				//wrong answer	
 				if(this.id!=rnd){
 					this.style.background="red";
 					this.style.color="white";
-					$(stage).append(`<a class="ui red text label"> WRONG </a>`);
+					// $(stage).append(`<a class="ui red text label"> WRONG </a>`);
 				}
-				setTimeout(function(){changeQuestion()},1000);
+				setTimeout(function(){changeQuestion()},100);
 			}})
 		}//display question
 		
@@ -79,8 +79,13 @@
 			if(stage=="#game1"){stage2="#game1";stage="#game2";}
 			else{stage2="#game2";stage="#game1";}
 			if(questionNumber<numberOfQuestions){displayQuestion();}else{displayFinalSlide();}
-			$(stage2).animate({"right": "+="+distance},"slow", function() {$(stage2).css('right','-'+distance);$(stage2).empty();});
-			$(stage).animate({"right": "+="+distance},"slow", function() {questionLock=false;});
+			$(stage2).animate({"right": "+="+distance},"slow", function() {
+				$(stage2).css('right','-'+distance);
+				$(stage2).empty();
+			});
+			$(stage).animate({"right": "+="+distance},"slow", function() {
+				questionLock=false;
+			});
 			document.getElementById("game1").style.color = "black";
 			document.getElementById("game2").style.color = "black";
 		}//change question
